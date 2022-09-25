@@ -10,15 +10,64 @@
 
   --bacgraund-color: #2f303a;
   --second-backgraund-color: #f5f4fa;
+
+  --margin-section: margin-bottom: 94px; 
 }
 /*------------- reset -------------*/
 
-.link {
-  text-decoration: none;
+html {
+  box-sizing: border-box;
 }
-
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+/* Стили для обнуления верхних отступов у элементов */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+/* Класс для обнуления базовых свойств у списков (ul) */
 .list {
   list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+/* Класс для обнуления базовых свойств у ссылок */
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+/* Свойства для корректного отображения картинок */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+/* Свойства для обнуления курсива у address */
+
+address {
+  font-style: normal;
+}
+
+/* utils */
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+
+  outline: 2px solid orange;
+}
+
+.section {
+  outline: 2px solid orange;
 }
 
 .visually-hidden {
@@ -34,6 +83,8 @@
   overflow: hidden;
 }
 
+
+
 /*------------- ALL -------------*/
 body {
   font-family: var(--main-fonts-family);
@@ -44,6 +95,25 @@ body {
 }
 
 /*------------- HEADER -------------*/
+
+.header-conteiner {
+  display: flex;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.header-menu {
+  display: flex;
+  margin-left: 93px;
+}
+
+.contacts-nav {
+  display: flex;
+  margin-left: auto;
+}
 
 .header-logo {
   font-family: Raleway, sans-serif;
@@ -56,18 +126,36 @@ body {
   color: #000000;
 }
 
+.header-menu-item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .header-nav-link {
+  display: block;
+  padding: 32px 0px;
+
+  color: var(--main-text-color);
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: var(--main-text-color);
+
+  outline: 2px solid green;
 }
 
 .header-contacs {
+  display: block;
+  padding: 32px 0px;
+
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--content-text-colot);
+
+  outline: 2px solid green;
+}
+
+.header-contacs-item:not(:last-child) {
+  margin-right: 50px;
 }
 
 .header-nav-link:hover,
@@ -82,32 +170,43 @@ body {
 .header-nav-link.link.current {
   color: var(--accent-color);
 }
-title------------ HERO -------------*/ .hero {
+
+/*--------------- HERO ---------- */
+
+.hero {
   background-color: var(--bacgraund-color);
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 280px;
 }
 .hero-title {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--second-text-color);
+  margin-bottom: 20px;
 }
 
 .hero-button {
   font-weight: 700;
   font-size: 16px;
   line-height: 1, 87;
-  display: flex;
+  min-width: 216px;
   align-items: center;
-  text-align: center;
   letter-spacing: 0.06em;
   color: var(--second-text-color);
   background: var(--accent-color);
   cursor: pointer;
+  padding: 10px 32px;
   border-radius: 4px;
+  border: none;
 }
+
+/*------------- advantage -------------*/
+
+
 
 .section-title {
   font-size: 36px;
@@ -115,7 +214,11 @@ title------------ HERO -------------*/ .hero {
   text-align: center;
 }
 
-/*------------- advantage -------------*/
+.advantage-list {
+  display: flex;
+  gap: 30;
+  margin-bottom: 94px;
+}
 
 .advantage-title {
   font-size: 14px;
@@ -127,7 +230,19 @@ title------------ HERO -------------*/ .hero {
   color: var(--content-text-colot);
 }
 
+/*------------- action -------------*/
+
+.action-list {
+  display: flex;
+  margin-bottom: 94px;
+}
+
 /*------------- team -------------*/
+
+.team-list {
+  display: flex;
+  margin-bottom: 94px;
+}
 
 .team-title {
   font-size: 16px;
@@ -149,22 +264,24 @@ footer {
 
 .footeer-logo {
   color: var(--second-text-color);
+  
+
 }
 
-.adres {
+.address {
   font-style: normal;
   line-height: 1.71;
   color: var(--second-text-color);
 }
 
-.adres-map {
+.addres-map {
   color: var(--second-text-color);
 }
-.adres-map:active {
+.addres-map:active {
   color: var(--accent-color);
 }
 
-.adres-link {
+.addres-link {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71px;
@@ -172,14 +289,19 @@ footer {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.adres-link:hover,
-.adres-link:focus {
+.addres-link:hover,
+.addres-link:focus {
   color: var(--accent-color);
 }
 
 /*************** PORFOLIO ****************/
 
 /*------------- filtre -------------*/
+
+.filtr-list {
+  display: flex;
+  justify-content: center;
+}
 
 .filtre-btn {
   font-weight: 500;
@@ -192,6 +314,8 @@ footer {
   background-color: var(--second-backgraund-color);
   border-radius: 4px;
   cursor: pointer;
+
+  margin-bottom: 34px;
 }
 
 .filtre-btn:hover,
@@ -203,6 +327,13 @@ footer {
 .filtre-btn .current {
   background-color: var(--accent-color);
   color: var(--second-text-color);
+}
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 88px;
 }
 
 .portfolio-title {
