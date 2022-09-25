@@ -204,7 +204,7 @@ body {
   border: none;
 }
 
-/*------------- advantage -------------*/
+/*------------- ADVANTAGE -------------*/
 
 
 
@@ -230,18 +230,20 @@ body {
   color: var(--content-text-colot);
 }
 
-/*------------- action -------------*/
+/*------------- ACTION -------------*/
 
 .action-list {
   display: flex;
   margin-bottom: 94px;
+  gap: 30px;
 }
 
-/*------------- team -------------*/
+/*------------- TEAM -------------*/
 
 .team-list {
   display: flex;
   margin-bottom: 94px;
+  gap: 30px;
 }
 
 .team-title {
