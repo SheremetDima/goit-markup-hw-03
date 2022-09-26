@@ -379,6 +379,7 @@ footer {
 
 .portfolio-item {
   width: 370px;
+  border: 1px solid #EEEEEE;
   }
 
   .porfolio-img {
