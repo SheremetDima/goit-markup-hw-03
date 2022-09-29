@@ -247,7 +247,9 @@ body {
 }
 
 /*------------- ACTION -------------*/
-.action-section {padding-top: 0px;}
+.action {
+  padding-top: 0px;
+}
 
 .action-list {
   display: flex;
@@ -265,6 +267,7 @@ body {
 
 }
 .team-title {
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
@@ -396,10 +399,9 @@ footer {
   border: 1px solid #EEEEEE;
   }
 
-  .porfolio-img {
-    margin-bottom: 20px;
-  }
-
+.portfolio-wraper {
+  padding: 20px 24px;
+}
 
 .portfolio-title {
   font-size: 18px;
